@@ -1,0 +1,10 @@
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\bin\Debug\Blood donor management System.exe.config
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\bin\Debug\Blood donor management System.exe
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\bin\Debug\Blood donor management System.pdb
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood donor management System.csprojAssemblyReference.cache
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood_donor_management_System.Form1.resources
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood_donor_management_System.Properties.Resources.resources
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood donor management System.csproj.GenerateResource.cache
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood donor management System.csproj.CoreCompileInputs.cache
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood donor management System.exe
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood donor management System.pdb
