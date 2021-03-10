@@ -179,5 +179,36 @@ namespace Blood_donor_management_System
         {
 
         }
+
+        private async void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FirebaseResponse response = await client.GetTaskAsync("Donor/" + textBox1.Text);
+                {
+                        Data obj = response.ResultAs<Data>();
+
+                        txtID.Text = obj.ID;
+                        txtName.Text = obj.Name;
+                        txtRAddress.Text = obj.Address;
+                        txtDescription.Text = obj.Description;
+                        txtContactNumber.Text = (obj.ContactNum).ToString();
+                        txtAge.Text = obj.Age;
+                        cboBoodGroup.Text = obj.BloodGroup;
+                        cboSex.Text = obj.Gender;
+
+                    MessageBox.Show("Your result is ready");
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Some error occured! Please restart the system.");
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
     }
 }
