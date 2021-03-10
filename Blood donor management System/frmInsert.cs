@@ -156,7 +156,8 @@ namespace Blood_donor_management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            frmDeleteDonor frm = new frmDeleteDonor();
+            frm.ShowDialog();
         }
 
         private void textBox1_TextChanged_2(object sender, EventArgs e)
@@ -165,6 +166,16 @@ namespace Blood_donor_management_System
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

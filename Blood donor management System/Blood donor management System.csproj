@@ -65,6 +65,12 @@
     <Compile Include="frmCampaign.Designer.cs">
       <DependentUpon>frmCampaign.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeleteDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteDonor.Designer.cs">
+      <DependentUpon>frmDeleteDonor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCampaign.resx">
       <DependentUpon>frmCampaign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteDonor.resx">
+      <DependentUpon>frmDeleteDonor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInsert.resx">
       <DependentUpon>frmInsert.cs</DependentUpon>
