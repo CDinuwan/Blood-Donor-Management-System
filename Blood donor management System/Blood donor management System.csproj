@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
+    <Compile Include="frmCampaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCampaign.Designer.cs">
+      <DependentUpon>frmCampaign.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCampaign.resx">
+      <DependentUpon>frmCampaign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInsert.resx">
       <DependentUpon>frmInsert.cs</DependentUpon>
     </EmbeddedResource>

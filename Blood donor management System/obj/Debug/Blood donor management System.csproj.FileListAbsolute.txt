@@ -16,3 +16,4 @@ C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor 
 C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood donor management System.csproj.CopyComplete
 C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood_donor_management_System.frmInsert.resources
 C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood_donor_management_System.frmHome.resources
+C:\Users\Chanuka Dinuwan\source\repos\Blood donor management System\Blood donor management System\obj\Debug\Blood_donor_management_System.frmCampaign.resources

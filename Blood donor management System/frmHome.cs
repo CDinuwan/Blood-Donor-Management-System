@@ -38,12 +38,21 @@ namespace Blood_donor_management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            frmCampaign frm = new frmCampaign();
+            frm.TopLevel = false;
+            panel2.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
