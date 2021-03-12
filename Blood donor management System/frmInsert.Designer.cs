@@ -116,6 +116,7 @@ namespace Blood_donor_management_System
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(200, 22);
             this.txtID.TabIndex = 1;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtName
             // 
@@ -243,7 +244,7 @@ namespace Blood_donor_management_System
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(191, 565);
+            this.button1.Location = new System.Drawing.Point(193, 565);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 38);
             this.button1.TabIndex = 16;
@@ -258,7 +259,7 @@ namespace Blood_donor_management_System
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(290, 565);
+            this.button2.Location = new System.Drawing.Point(291, 565);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 38);
             this.button2.TabIndex = 17;
@@ -273,7 +274,7 @@ namespace Blood_donor_management_System
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(486, 565);
+            this.button3.Location = new System.Drawing.Point(390, 565);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 38);
             this.button3.TabIndex = 18;
@@ -370,7 +371,7 @@ namespace Blood_donor_management_System
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(386, 565);
+            this.btnClear.Location = new System.Drawing.Point(487, 565);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(86, 38);
             this.btnClear.TabIndex = 27;
@@ -429,16 +430,10 @@ namespace Blood_donor_management_System
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtContactNumber;
-        private System.Windows.Forms.RichTextBox txtDescription;
-        private System.Windows.Forms.RichTextBox txtRAddress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cboBoodGroup;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -447,14 +442,20 @@ namespace Blood_donor_management_System
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cboSex;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtContactNumber;
+        public System.Windows.Forms.RichTextBox txtDescription;
+        public System.Windows.Forms.RichTextBox txtRAddress;
+        public System.Windows.Forms.ComboBox cboBoodGroup;
+        public System.Windows.Forms.TextBox txtAge;
+        public System.Windows.Forms.ComboBox cboSex;
     }
 }
 

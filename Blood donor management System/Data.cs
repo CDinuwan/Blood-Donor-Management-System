@@ -13,7 +13,7 @@ namespace Blood_donor_management_System
         public string Address { get; set; }
         public string Age { get; set; }
         public string Gender { get; set; }
-        public int ContactNum { get; set; }
+        public string ContactNum { get; set; }
         public string Description { get; set; }
         public string BloodGroup { get; set; }
     }

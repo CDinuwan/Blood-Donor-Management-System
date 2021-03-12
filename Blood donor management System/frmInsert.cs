@@ -92,7 +92,7 @@ namespace Blood_donor_management_System
                     ID = txtID.Text,
                     Name = txtName.Text,
                     Address = txtRAddress.Text,
-                    ContactNum = Convert.ToInt32(txtContactNumber.Text),
+                    ContactNum = txtContactNumber.Text,
                     Age = txtAge.Text,
                     Description = txtDescription.Text,
                     Gender = cboSex.Text,
@@ -175,8 +175,43 @@ namespace Blood_donor_management_System
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
+            if (txtID.Text != String.Empty)
+            {
+                if (MessageBox.Show("Are you sure you want to add this record?", "save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    try
+                    {
+                        var data = new Data
+                        {
+                            ID = txtID.Text,
+                            Address = txtRAddress.Text,
+                            Age = txtAge.Text,
+                            ContactNum = txtContactNumber.Text,
+                            BloodGroup = cboBoodGroup.Text,
+                            Gender = cboSex.Text,
+                            Description = txtDescription.Text,
+                            Name = txtName.Text
+                        };
+
+
+                        FirebaseResponse response = await client.UpdateTaskAsync("Donor/" + textBox1.Text, data);
+                        Data result = response.ResultAs<Data>();
+                        MessageBox.Show("Your message has been successfully updated.");
+                        Clear();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please check your detail again.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("You should enter atleast your ID number.");
+            }
 
         }
 
@@ -209,6 +244,11 @@ namespace Blood_donor_management_System
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
