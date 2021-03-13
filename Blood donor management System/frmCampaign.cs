@@ -154,15 +154,14 @@ namespace Blood_donor_management_System
                         };
 
 
-                        FirebaseResponse response = await client.UpdateTaskAsync("Campaign/" + textBox1.Text, data);
+                        FirebaseResponse response = await client.UpdateTaskAsync("Campaign/" + txtPlace.Text, data);
                         CampaignData result = response.ResultAs<CampaignData>();
                         MessageBox.Show("Your message has been successfully updated.");
                         Clear();
                     }
-                    catch (Exception er)
+                    catch (Exception)
                     {
-                        //////MessageBox.Show("Please check your detail again.");
-                        MessageBox.Show(er.Message);
+                        MessageBox.Show("Please check your detail again.");
                     }
                 }
             }

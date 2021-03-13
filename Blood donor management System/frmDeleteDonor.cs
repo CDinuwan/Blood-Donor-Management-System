@@ -60,24 +60,27 @@ namespace Blood_donor_management_System
             this.Dispose();
         }
 
-        private async void textBox1_Enter(object sender, EventArgs e)
+        private void textBox1_Enter(object sender, EventArgs e)
         {
-                try
-                {
-                    FirebaseResponse response = await client.DeleteTaskAsync("Donor/" + textBox1.Text);
-                    MessageBox.Show("Your record has been successfully deleted!");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Some went wrong. Please check again your details.");
-                }
-            
-            
+               
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private async void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FirebaseResponse response = await client.DeleteTaskAsync("Donor/" + textBox1.Text);
+                MessageBox.Show("Your record has been successfully deleted!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Some went wrong. Please check again your details.");
+            }
         }
     }
 }
