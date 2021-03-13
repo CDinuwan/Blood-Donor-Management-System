@@ -170,5 +170,11 @@ namespace Blood_donor_management_System
                 MessageBox.Show("You should enter atleast your Place and Start date.");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmDeleteCampaigns frm = new frmDeleteCampaigns();
+            frm.ShowDialog();
+        }
     }
 }

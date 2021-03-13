@@ -14,7 +14,7 @@ using FireSharp.Response;
 
 namespace Blood_donor_management_System
 {
-    public partial class frmDeleteDonor : Form
+    public partial class frmDeleteCampaigns : Form
     {
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -22,17 +22,30 @@ namespace Blood_donor_management_System
             BasePath = "https://blood-donor-9af63-default-rtdb.firebaseio.com/"
         };
         IFirebaseClient client;
-        public frmDeleteDonor()
+        public frmDeleteCampaigns()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+        private async void pictureBox1_Click(object sender, EventArgs e)
+        {if(MessageBox.Show("Are you really want to delete this record?","Confrimation",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                try
+                {
+                    FirebaseResponse response = await client.DeleteTaskAsync("Campaign/" + textBox1.Text);
+                    MessageBox.Show("Your record has been successfully deleted!");
+                    frmCampaign frm=new frmCampaign();
+                    frm.Clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Some went wrong. Please check again your details.");
+                }
+            }
+            
         }
 
-        private void frmDeleteDonor_Load(object sender, EventArgs e)
+        private void frmDeleteCampaigns_Load(object sender, EventArgs e)
         {
             try
             {
@@ -57,36 +70,9 @@ namespace Blood_donor_management_System
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            frmInsert frm = new frmInsert();
-            frm.Clear();
             this.Dispose();
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-               
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("Are you really want to delete this record?","Deletion",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-            {
-                try
-                {
-                    FirebaseResponse response = await client.DeleteTaskAsync("Donor/" + textBox1.Text);
-                    MessageBox.Show("Your record has been successfully deleted!");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Some went wrong. Please check again your details.");
-                }
-            }
-            
+            frmCampaign frm = new frmCampaign();
+            frm.Clear();
         }
     }
 }
