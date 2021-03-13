@@ -16,5 +16,6 @@ namespace Blood_donor_management_System
         public string ContactNum { get; set; }
         public string Description { get; set; }
         public string BloodGroup { get; set; }
+        public DateTime DonatedDate { get; set; }
     }
 }

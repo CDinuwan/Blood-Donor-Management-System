@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using System.Diagnostics;
 
 namespace Blood_donor_management_System
 {
@@ -80,35 +81,46 @@ namespace Blood_donor_management_System
             txtRAddress.Clear();
             cboBoodGroup.ResetText();
             cboSex.ResetText();
+            dateTimePicker1.ResetText();
         }
 
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure you want to add this record?","Insert",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if(txtID.Text!=String.Empty && cboBoodGroup.Text!=String.Empty)
             {
-                var data = new Data
+                if (MessageBox.Show("Are you sure you want to add this record?", "Insert", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    ID = txtID.Text,
-                    Name = txtName.Text,
-                    Address = txtRAddress.Text,
-                    ContactNum = txtContactNumber.Text,
-                    Age = txtAge.Text,
-                    Description = txtDescription.Text,
-                    Gender = cboSex.Text,
-                    BloodGroup = cboBoodGroup.Text
-                };
+                    var data = new Data
+                    {
+                        ID = txtID.Text,
+                        Name = txtName.Text,
+                        Address = txtRAddress.Text,
+                        ContactNum = txtContactNumber.Text,
+                        Age = txtAge.Text,
+                        Description = txtDescription.Text,
+                        Gender = cboSex.Text,
+                        BloodGroup = cboBoodGroup.Text,
+                        DonatedDate = dateTimePicker1.Value
+                    };
 
-                try
-                {
-                    SetResponse response = await client.SetTaskAsync("Donor/" + txtID.Text, data);
-                    Data result = response.ResultAs<Data>();
-                    MessageBox.Show("Your record has been successfully added!");
-                    Clear();
-                }catch(Exception)
-                {
-                    MessageBox.Show("Please check your data again!");
+                    try
+                    {
+                        SetResponse response = await client.SetTaskAsync("Donor/" + txtID.Text, data);
+                        Data result = response.ResultAs<Data>();
+                        MessageBox.Show("Your record has been successfully added!");
+                        Clear();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please check your data again!");
+                    }
                 }
+            
+            }
+            else
+            {
+                MessageBox.Show("You should enter atleast your ID number and blood group.");
             }
             
             
@@ -177,7 +189,7 @@ namespace Blood_donor_management_System
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            if (txtID.Text != String.Empty)
+            if (txtID.Text != String.Empty && cboBoodGroup.Text!=String.Empty)
             {
                 if (MessageBox.Show("Are you sure you want to add this record?", "save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -193,7 +205,8 @@ namespace Blood_donor_management_System
                             BloodGroup = cboBoodGroup.Text,
                             Gender = cboSex.Text,
                             Description = txtDescription.Text,
-                            Name = txtName.Text
+                            Name = txtName.Text,
+                            DonatedDate = dateTimePicker1.Value
                         };
 
 
@@ -210,7 +223,7 @@ namespace Blood_donor_management_System
             }
             else
             {
-                MessageBox.Show("You should enter atleast your ID number.");
+                MessageBox.Show("You should enter atleast your ID number and blood group.");
             }
 
         }
@@ -221,16 +234,17 @@ namespace Blood_donor_management_System
             {
                 FirebaseResponse response = await client.GetTaskAsync("Donor/" + textBox1.Text);
                 {
-                        Data obj = response.ResultAs<Data>();
+                    Data obj = response.ResultAs<Data>();
 
-                        txtID.Text = obj.ID;
-                        txtName.Text = obj.Name;
-                        txtRAddress.Text = obj.Address;
-                        txtDescription.Text = obj.Description;
-                        txtContactNumber.Text = (obj.ContactNum).ToString();
-                        txtAge.Text = obj.Age;
-                        cboBoodGroup.Text = obj.BloodGroup;
-                        cboSex.Text = obj.Gender;
+                    txtID.Text = obj.ID;
+                    txtName.Text = obj.Name;
+                    txtRAddress.Text = obj.Address;
+                    txtDescription.Text = obj.Description;
+                    txtContactNumber.Text = (obj.ContactNum).ToString();
+                    txtAge.Text = obj.Age;
+                    cboBoodGroup.Text = obj.BloodGroup;
+                    cboSex.Text = obj.Gender;
+                    dateTimePicker1.Value = obj.DonatedDate;
 
                     MessageBox.Show("Your result is ready");
                 }

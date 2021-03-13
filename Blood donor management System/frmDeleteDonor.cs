@@ -8,10 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+
 namespace Blood_donor_management_System
 {
     public partial class frmDeleteDonor : Form
     {
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "RexrG6OuogoAu6dghwvsZtLkCi3z5ig2NfaRtnsK",
+            BasePath = "https://blood-donor-9af63-default-rtdb.firebaseio.com/"
+        };
+        IFirebaseClient client;
         public frmDeleteDonor()
         {
             InitializeComponent();
@@ -30,6 +40,26 @@ namespace Blood_donor_management_System
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private async void textBox1_Enter(object sender, EventArgs e)
+        {
+                try
+                {
+                    FirebaseResponse response = await client.DeleteTaskAsync("Donor/" + textBox1.Text);
+                    MessageBox.Show("Your record has been successfully deleted!");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Some went wrong. Please check again your details.");
+                }
+            
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
