@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CampaignData.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="frmCampaign.cs">
       <SubType>Form</SubType>

@@ -111,29 +111,33 @@ namespace Blood_donor_management_System
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(175, 81);
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(169, 82);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(289, 22);
+            this.txtID.Size = new System.Drawing.Size(289, 29);
             this.txtID.TabIndex = 1;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(172, 133);
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(169, 134);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(289, 22);
+            this.txtName.Size = new System.Drawing.Size(289, 29);
             this.txtName.TabIndex = 2;
             // 
             // txtContactNumber
             // 
+            this.txtContactNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactNumber.Location = new System.Drawing.Point(169, 339);
             this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(289, 22);
+            this.txtContactNumber.Size = new System.Drawing.Size(289, 29);
             this.txtContactNumber.TabIndex = 3;
             this.txtContactNumber.TextChanged += new System.EventHandler(this.txtContactNumber_TextChanged);
             // 
             // txtDescription
             // 
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(169, 463);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(289, 60);
@@ -142,7 +146,8 @@ namespace Blood_donor_management_System
             // 
             // txtRAddress
             // 
-            this.txtRAddress.Location = new System.Drawing.Point(172, 175);
+            this.txtRAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRAddress.Location = new System.Drawing.Point(169, 175);
             this.txtRAddress.Name = "txtRAddress";
             this.txtRAddress.Size = new System.Drawing.Size(289, 71);
             this.txtRAddress.TabIndex = 7;
@@ -190,6 +195,7 @@ namespace Blood_donor_management_System
             // 
             // cboBoodGroup
             // 
+            this.cboBoodGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoodGroup.FormattingEnabled = true;
             this.cboBoodGroup.Items.AddRange(new object[] {
             "A-",
@@ -203,7 +209,7 @@ namespace Blood_donor_management_System
             ""});
             this.cboBoodGroup.Location = new System.Drawing.Point(169, 417);
             this.cboBoodGroup.Name = "cboBoodGroup";
-            this.cboBoodGroup.Size = new System.Drawing.Size(289, 21);
+            this.cboBoodGroup.Size = new System.Drawing.Size(289, 29);
             this.cboBoodGroup.TabIndex = 12;
             this.cboBoodGroup.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.cboBoodGroup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboBoodGroup_KeyPress);
@@ -286,9 +292,10 @@ namespace Blood_donor_management_System
             // 
             // txtAge
             // 
+            this.txtAge.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.Location = new System.Drawing.Point(169, 299);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(289, 22);
+            this.txtAge.Size = new System.Drawing.Size(289, 29);
             this.txtAge.TabIndex = 20;
             this.txtAge.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -304,6 +311,7 @@ namespace Blood_donor_management_System
             // 
             // cboSex
             // 
+            this.cboSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSex.FormattingEnabled = true;
             this.cboSex.Items.AddRange(new object[] {
             "Male",
@@ -311,7 +319,7 @@ namespace Blood_donor_management_System
             "Other"});
             this.cboSex.Location = new System.Drawing.Point(169, 263);
             this.cboSex.Name = "cboSex";
-            this.cboSex.Size = new System.Drawing.Size(289, 21);
+            this.cboSex.Size = new System.Drawing.Size(289, 29);
             this.cboSex.TabIndex = 24;
             this.cboSex.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             this.cboSex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboSex_KeyPress);
@@ -367,10 +375,10 @@ namespace Blood_donor_management_System
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(169, 379);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(289, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(289, 29);
             this.dateTimePicker1.TabIndex = 30;
             // 
             // frmInsert

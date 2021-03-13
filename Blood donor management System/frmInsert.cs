@@ -82,6 +82,7 @@ namespace Blood_donor_management_System
             cboBoodGroup.ResetText();
             cboSex.ResetText();
             dateTimePicker1.ResetText();
+            textBox1.Clear();
         }
 
 

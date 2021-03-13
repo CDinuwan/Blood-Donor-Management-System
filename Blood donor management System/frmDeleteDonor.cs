@@ -34,7 +34,25 @@ namespace Blood_donor_management_System
 
         private void frmDeleteDonor_Load(object sender, EventArgs e)
         {
+            try
+            {
+                client = new FireSharp.FirebaseClient(config);
 
+                if (client != null)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Check your connection again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Application.Exit();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check your connection again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Application.Exit();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
