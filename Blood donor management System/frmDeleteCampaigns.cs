@@ -28,19 +28,27 @@ namespace Blood_donor_management_System
         }
 
         private async void pictureBox1_Click(object sender, EventArgs e)
-        {if(MessageBox.Show("Are you really want to delete this record?","Confrimation",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+        {
+            if (textBox1.Text != null)
             {
-                try
+                if (MessageBox.Show("Are you really want to delete this record?", "Confrimation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    FirebaseResponse response = await client.DeleteTaskAsync("Campaign/" + textBox1.Text);
-                    MessageBox.Show("Your record has been successfully deleted!");
-                    frmCampaign frm=new frmCampaign();
-                    frm.Clear();
+                    try
+                    {
+                        FirebaseResponse response = await client.DeleteTaskAsync("Campaign/" + textBox1.Text);
+                        MessageBox.Show("Your record has been successfully deleted!");
+                        frmCampaign frm = new frmCampaign();
+                        frm.Clear();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Some went wrong. Please check again your details.");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Some went wrong. Please check again your details.");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter your place!");
             }
             
         }
