@@ -58,9 +58,13 @@ namespace Blood_donor_management_System
             this.btnClear = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblDonor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +79,7 @@ namespace Blood_donor_management_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(861, 55);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
@@ -381,12 +386,45 @@ namespace Blood_donor_management_System
             this.dateTimePicker1.Size = new System.Drawing.Size(289, 29);
             this.dateTimePicker1.TabIndex = 30;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Controls.Add(this.lblDonor);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(476, 130);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(369, 392);
+            this.panel2.TabIndex = 31;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(46, 107);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(271, 86);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Donors:";
+            // 
+            // lblDonor
+            // 
+            this.lblDonor.AutoSize = true;
+            this.lblDonor.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonor.ForeColor = System.Drawing.Color.White;
+            this.lblDonor.Location = new System.Drawing.Point(154, 193);
+            this.lblDonor.Name = "lblDonor";
+            this.lblDonor.Size = new System.Drawing.Size(56, 65);
+            this.lblDonor.TabIndex = 1;
+            this.lblDonor.Text = "0";
+            // 
             // frmInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(861, 614);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnClear);
@@ -422,6 +460,8 @@ namespace Blood_donor_management_System
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,6 +497,9 @@ namespace Blood_donor_management_System
         public System.Windows.Forms.ComboBox cboSex;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblDonor;
+        private System.Windows.Forms.Label label11;
     }
 }
 

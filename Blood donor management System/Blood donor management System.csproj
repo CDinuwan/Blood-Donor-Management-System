@@ -85,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CampaignData.cs" />
+    <Compile Include="Counter_Camp.cs" />
+    <Compile Include="Counter_Class.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="frmCampaign.cs">
       <SubType>Form</SubType>

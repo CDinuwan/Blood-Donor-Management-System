@@ -53,9 +53,13 @@ namespace Blood_donor_management_System
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.lblCamp = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -305,11 +309,44 @@ namespace Blood_donor_management_System
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // lblCamp
+            // 
+            this.lblCamp.AutoSize = true;
+            this.lblCamp.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCamp.ForeColor = System.Drawing.Color.White;
+            this.lblCamp.Location = new System.Drawing.Point(155, 222);
+            this.lblCamp.Name = "lblCamp";
+            this.lblCamp.Size = new System.Drawing.Size(56, 65);
+            this.lblCamp.TabIndex = 1;
+            this.lblCamp.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(-24, 126);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(403, 86);
+            this.label11.TabIndex = 0;
+            this.label11.Text = " Campaigns:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Controls.Add(this.lblCamp);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(483, 126);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(369, 392);
+            this.panel2.TabIndex = 36;
+            // 
             // frmCampaign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 614);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label4);
@@ -338,6 +375,8 @@ namespace Blood_donor_management_System
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +407,8 @@ namespace Blood_donor_management_System
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lblCamp;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel2;
     }
 }

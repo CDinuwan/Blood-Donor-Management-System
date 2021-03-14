@@ -31,7 +31,20 @@ namespace Blood_donor_management_System
         {
             this.Dispose();
         }
+        public async void CountCamps()
+        {
+            try
+            {
+                FirebaseResponse response2 = await client.GetTaskAsync("CounterC/node");
+                Counter_Camp obj1 = response2.ResultAs<Counter_Camp>();
 
+                lblCamp.Text = obj1.cnts;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong. Please restart the system.");
+            }
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -45,7 +58,7 @@ namespace Blood_donor_management_System
 
                 if (client != null)
                 {
-
+                    CountCamps();
                 }
                 else
                 {
@@ -80,9 +93,13 @@ namespace Blood_donor_management_System
             {
                 if (MessageBox.Show("Are you sure you want to add this record?", "Insert", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    FirebaseResponse resp1 = await client.GetTaskAsync("CounterC/node");
+                    Counter_Camp get = resp1.ResultAs<Counter_Camp>();
+
                     var data = new CampaignData
                     {
-                        OrganizedBy= txtOrganizedby.Text,
+                        cnts = (Convert.ToInt32(get.cnts) + 1).ToString(),
+                        OrganizedBy = txtOrganizedby.Text,
                         ContactNumber = txtContactNumber.Text,
                         Place = txtPlace.Text,
                         EndDate = dateTimePicker1.Value,
@@ -95,6 +112,15 @@ namespace Blood_donor_management_System
                         SetResponse response = await client.SetTaskAsync("Campaign/" + txtPlace.Text, data);
                         CampaignData result = response.ResultAs<CampaignData>();
                         MessageBox.Show("Your record has been successfully added!");
+
+                        var obj = new Counter_Camp
+                        {
+                            cnts = data.cnts
+                        };
+
+                        SetResponse response12 = await client.SetTaskAsync("CounterC/node", obj);
+                        CountCamps();
+
                         Clear();
                     }
                     catch (Exception)

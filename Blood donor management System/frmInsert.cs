@@ -47,16 +47,31 @@ namespace Blood_donor_management_System
         {
 
         }
+        public async void CountDonors()
+        {
+            try
+            {
+                FirebaseResponse response2 = await client.GetTaskAsync("Counter/node");
+                Counter_Class obj1 = response2.ResultAs<Counter_Class>();
+
+                lblDonor.Text = obj1.cnt;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong. Please restart the system.");
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             try
             {
+
                 client = new FireSharp.FirebaseClient(config);
 
                 if (client != null)
                 {
-                    
+                    CountDonors();
                 }
                 else
                 {
@@ -69,6 +84,8 @@ namespace Blood_donor_management_System
                 MessageBox.Show("Check your connection again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Exit();
             }
+           
+            
             
         }
         public void Clear()
@@ -88,12 +105,16 @@ namespace Blood_donor_management_System
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if(txtID.Text!=String.Empty && cboBoodGroup.Text!=String.Empty)
+            if (txtID.Text != String.Empty && cboBoodGroup.Text != String.Empty)
             {
                 if (MessageBox.Show("Are you sure you want to add this record?", "Insert", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    FirebaseResponse resp = await client.GetTaskAsync("Counter/node");
+                    Counter_Class get = resp.ResultAs<Counter_Class>();
+
                     var data = new Data
                     {
+                        cnt=(Convert.ToInt32(get.cnt)+1).ToString(),
                         ID = txtID.Text,
                         Name = txtName.Text,
                         Address = txtRAddress.Text,
@@ -110,20 +131,26 @@ namespace Blood_donor_management_System
                         SetResponse response = await client.SetTaskAsync("Donor/" + txtID.Text, data);
                         Data result = response.ResultAs<Data>();
                         MessageBox.Show("Your record has been successfully added!");
+                        var obj = new Counter_Class
+                        {
+                            cnt=data.cnt
+                        };
+
+                        SetResponse response12 = await client.SetTaskAsync("Counter/node", obj);
+                        CountDonors();
                         Clear();
                     }
                     catch (Exception)
                     {
                         MessageBox.Show("Please check your data again!");
                     }
+
                 }
-            
+                else
+                {
+                    MessageBox.Show("You should enter atleast your ID number and blood group.");
+                }
             }
-            else
-            {
-                MessageBox.Show("You should enter atleast your ID number and blood group.");
-            }
-            
             
         }
 
@@ -235,6 +262,7 @@ namespace Blood_donor_management_System
             {
                 FirebaseResponse response = await client.GetTaskAsync("Donor/" + textBox1.Text);
                 {
+
                     Data obj = response.ResultAs<Data>();
 
                     txtID.Text = obj.ID;
@@ -262,6 +290,11 @@ namespace Blood_donor_management_System
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

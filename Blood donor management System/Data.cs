@@ -8,6 +8,7 @@ namespace Blood_donor_management_System
 {
     public class Data
     {
+        public string cnt { get; set; }
         public string ID { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
