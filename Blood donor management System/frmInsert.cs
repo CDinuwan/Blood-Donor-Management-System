@@ -262,25 +262,32 @@ namespace Blood_donor_management_System
             {
                 FirebaseResponse response = await client.GetTaskAsync("Donor/" + textBox1.Text);
                 {
+                    if (response==null)
+                    {
+                        MessageBox.Show("Connection Error!");
+                    }
+                    else
+                    {
+                        Data obj = response.ResultAs<Data>();
 
-                    Data obj = response.ResultAs<Data>();
+                        txtID.Text = obj.ID;
+                        txtName.Text = obj.Name;
+                        txtRAddress.Text = obj.Address;
+                        txtDescription.Text = obj.Description;
+                        txtContactNumber.Text = (obj.ContactNum).ToString();
+                        txtAge.Text = obj.Age;
+                        cboBoodGroup.Text = obj.BloodGroup;
+                        cboSex.Text = obj.Gender;
+                        dateTimePicker1.Value = obj.DonatedDate;
 
-                    txtID.Text = obj.ID;
-                    txtName.Text = obj.Name;
-                    txtRAddress.Text = obj.Address;
-                    txtDescription.Text = obj.Description;
-                    txtContactNumber.Text = (obj.ContactNum).ToString();
-                    txtAge.Text = obj.Age;
-                    cboBoodGroup.Text = obj.BloodGroup;
-                    cboSex.Text = obj.Gender;
-                    dateTimePicker1.Value = obj.DonatedDate;
-
-                    MessageBox.Show("Your result is ready");
+                        MessageBox.Show("Your result is ready");
+                    }
+                    
                 }
             }
             catch(Exception)
-            {
-                MessageBox.Show("Some error occured! Please restart the system.");
+            { 
+                MessageBox.Show("You entered ID number is wrong!");
             }
         }
 

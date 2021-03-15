@@ -156,7 +156,7 @@ namespace Blood_donor_management_System
             }
             catch (Exception)
             {
-                MessageBox.Show("Some error occured! Please restart the system.");
+                MessageBox.Show("Your entered place is wrong!");
             }
         }
 
