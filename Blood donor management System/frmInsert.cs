@@ -285,9 +285,13 @@ namespace Blood_donor_management_System
                     
                 }
             }
-            catch(Exception)
+            catch(NullReferenceException)
             { 
                 MessageBox.Show("You entered ID number is wrong!");
+            }
+            catch (DBConcurrencyException)
+            {
+                MessageBox.Show("Connection error");
             }
         }
 

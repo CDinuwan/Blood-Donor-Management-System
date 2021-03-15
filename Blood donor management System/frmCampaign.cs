@@ -154,9 +154,13 @@ namespace Blood_donor_management_System
                     MessageBox.Show("Your result is ready");
                 }
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Your entered place is wrong!");
+            }
+            catch(DBConcurrencyException)
+            {
+                MessageBox.Show("Connection error");
             }
         }
 
