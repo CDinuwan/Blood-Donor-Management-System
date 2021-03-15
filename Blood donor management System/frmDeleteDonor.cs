@@ -80,6 +80,8 @@ namespace Blood_donor_management_System
                 {
                     try
                     {
+                        FirebaseResponse resp = await client.GetTaskAsync("Counter/node");
+                        Counter_Class get = resp.ResultAs<Counter_Class>();
                         FirebaseResponse response = await client.DeleteTaskAsync("Donor/" + textBox1.Text);
                         MessageBox.Show("Your record has been successfully deleted!");
                     }

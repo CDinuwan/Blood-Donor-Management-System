@@ -258,41 +258,50 @@ namespace Blood_donor_management_System
 
         private async void button5_Click(object sender, EventArgs e)
         {
-            try
+            if(textBox1.Text!=null)
             {
-                FirebaseResponse response = await client.GetTaskAsync("Donor/" + textBox1.Text);
+                try
                 {
-                    if (response==null)
+                    FirebaseResponse response = await client.GetTaskAsync("Donor/" + textBox1.Text);
                     {
-                        MessageBox.Show("Connection Error!");
-                    }
-                    else
-                    {
-                        Data obj = response.ResultAs<Data>();
+                        if (response == null)
+                        {
+                            MessageBox.Show("Connection Error!");
+                        }
+                        else
+                        {
+                            Data obj = response.ResultAs<Data>();
 
-                        txtID.Text = obj.ID;
-                        txtName.Text = obj.Name;
-                        txtRAddress.Text = obj.Address;
-                        txtDescription.Text = obj.Description;
-                        txtContactNumber.Text = (obj.ContactNum).ToString();
-                        txtAge.Text = obj.Age;
-                        cboBoodGroup.Text = obj.BloodGroup;
-                        cboSex.Text = obj.Gender;
-                        dateTimePicker1.Value = obj.DonatedDate;
+                            txtID.Text = obj.ID;
+                            txtName.Text = obj.Name;
+                            txtRAddress.Text = obj.Address;
+                            txtDescription.Text = obj.Description;
+                            txtContactNumber.Text = (obj.ContactNum).ToString();
+                            txtAge.Text = obj.Age;
+                            cboBoodGroup.Text = obj.BloodGroup;
+                            cboSex.Text = obj.Gender;
+                            dateTimePicker1.Value = obj.DonatedDate;
 
-                        MessageBox.Show("Your result is ready");
+                            MessageBox.Show("Your result is ready");
+                        }
+
                     }
-                    
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("You entered ID number is wrong!");
+                    Clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Connection error");
                 }
             }
-            catch(NullReferenceException)
-            { 
-                MessageBox.Show("You entered ID number is wrong!");
-            }
-            catch (DBConcurrencyException)
+            else
             {
-                MessageBox.Show("Connection error");
+                MessageBox.Show("Please enter ID number before you search!");
             }
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)

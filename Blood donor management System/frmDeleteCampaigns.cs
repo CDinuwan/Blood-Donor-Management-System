@@ -39,10 +39,13 @@ namespace Blood_donor_management_System
                         MessageBox.Show("Your record has been successfully deleted!");
                         frmCampaign frm = new frmCampaign();
                         frm.Clear();
+                        this.Dispose();
+
                     }
                     catch (Exception)
                     {
                         MessageBox.Show("Some went wrong. Please check again your details.");
+                        this.Dispose();
                     }
                 }
             }

@@ -138,30 +138,43 @@ namespace Blood_donor_management_System
 
         private async void button5_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text != null)
             {
-                FirebaseResponse response = await client.GetTaskAsync("Campaign/" + textBox1.Text);
+                try
                 {
-                    CampaignData obj = response.ResultAs<CampaignData>();
+                    FirebaseResponse response = await client.GetTaskAsync("Campaign/" + textBox1.Text);
+                    {
+                        CampaignData obj = response.ResultAs<CampaignData>();
 
-                    txtPlace.Text = obj.Place;
-                    txtDescription.Text = obj.Description;
-                    txtOrganizedby.Text = obj.OrganizedBy;
-                    txtContactNumber.Text = obj.OrganizedBy;
-                    txtDescription.Text = obj.Description;
-                    dateTimePicker1.Value = obj.StartDate;
-                    dateTimePicker2.Value = obj.EndDate;
-                    MessageBox.Show("Your result is ready");
+                        txtPlace.Text = obj.Place;
+                        txtDescription.Text = obj.Description;
+                        txtOrganizedby.Text = obj.OrganizedBy;
+                        txtContactNumber.Text = obj.OrganizedBy;
+                        txtDescription.Text = obj.Description;
+                        dateTimePicker1.Value = obj.StartDate;
+                        dateTimePicker2.Value = obj.EndDate;
+                        MessageBox.Show("Your result is ready");
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Your entered place is wrong!");
+                    Clear();
+                }
+                catch(ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You entered data is incorrect!");
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Something went wrong. Please restart the system.");
                 }
             }
-            catch (NullReferenceException)
+            else
             {
-                MessageBox.Show("Your entered place is wrong!");
+                MessageBox.Show("Please enter ID number before you search");
             }
-            catch(DBConcurrencyException)
-            {
-                MessageBox.Show("Connection error");
-            }
+            
         }
 
         private async void button3_Click(object sender, EventArgs e)

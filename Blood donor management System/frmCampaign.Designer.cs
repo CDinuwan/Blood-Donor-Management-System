@@ -407,8 +407,8 @@ namespace Blood_donor_management_System
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label lblCamp;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label lblCamp;
     }
 }
