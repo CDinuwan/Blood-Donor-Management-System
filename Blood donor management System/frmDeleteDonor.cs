@@ -57,8 +57,6 @@ namespace Blood_donor_management_System
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            frmInsert frm = new frmInsert();
-            frm.Clear();
             this.Dispose();
         }
 
