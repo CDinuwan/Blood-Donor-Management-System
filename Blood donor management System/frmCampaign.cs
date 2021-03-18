@@ -81,6 +81,7 @@ namespace Blood_donor_management_System
             textBox1.Clear();
             dateTimePicker1.ResetText();
             dateTimePicker2.ResetText();
+            txtCampID.Clear();
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -89,7 +90,7 @@ namespace Blood_donor_management_System
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if (txtPlace.Text != String.Empty && dateTimePicker1.Text != String.Empty)
+            if (txtCampID.Text!=String.Empty && txtPlace.Text != String.Empty && dateTimePicker1.Text != String.Empty)
             {
                 if (MessageBox.Show("Are you sure you want to add this record?", "Insert", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -99,6 +100,7 @@ namespace Blood_donor_management_System
                     var data = new CampaignData
                     {
                         cnts = (Convert.ToInt32(get.cnts) + 1).ToString(),
+                        CampID=txtCampID.Text,
                         OrganizedBy = txtOrganizedby.Text,
                         ContactNumber = txtContactNumber.Text,
                         Place = txtPlace.Text,
@@ -109,7 +111,7 @@ namespace Blood_donor_management_System
 
                     try
                     {
-                        SetResponse response = await client.SetTaskAsync("Campaign/" + txtPlace.Text, data);
+                        SetResponse response = await client.SetTaskAsync("Campaign/" + txtCampID.Text, data);
                         CampaignData result = response.ResultAs<CampaignData>();
                         MessageBox.Show("Your record has been successfully added!");
 
@@ -132,7 +134,7 @@ namespace Blood_donor_management_System
             }
             else
             {
-                MessageBox.Show("You should enter atleast your Place and Start date.");
+                MessageBox.Show("You should enter atleast your CampID,Place and Start date.");
             }
         }
 
@@ -149,7 +151,8 @@ namespace Blood_donor_management_System
                         txtPlace.Text = obj.Place;
                         txtDescription.Text = obj.Description;
                         txtOrganizedby.Text = obj.OrganizedBy;
-                        txtContactNumber.Text = obj.OrganizedBy;
+                        txtCampID.Text = obj.CampID;
+                        txtContactNumber.Text = obj.ContactNumber;
                         txtDescription.Text = obj.Description;
                         dateTimePicker1.Value = obj.StartDate;
                         dateTimePicker2.Value = obj.EndDate;
@@ -158,7 +161,7 @@ namespace Blood_donor_management_System
                 }
                 catch (NullReferenceException)
                 {
-                    MessageBox.Show("Your entered place is wrong!");
+                    MessageBox.Show("Your entered CampID is wrong!");
                     Clear();
                 }
                 catch(ArgumentOutOfRangeException)
@@ -172,7 +175,7 @@ namespace Blood_donor_management_System
             }
             else
             {
-                MessageBox.Show("Please enter ID number before you search");
+                MessageBox.Show("Please enter Camp ID before you search");
             }
             
         }
@@ -194,10 +197,11 @@ namespace Blood_donor_management_System
                             EndDate = dateTimePicker1.Value,
                             StartDate = dateTimePicker2.Value,
                             Description = txtDescription.Text,
+                            CampID = txtCampID.Text
                         };
 
 
-                        FirebaseResponse response = await client.UpdateTaskAsync("Campaign/" + txtPlace.Text, data);
+                        FirebaseResponse response = await client.UpdateTaskAsync("Campaign/" + txtCampID.Text, data);
                         CampaignData result = response.ResultAs<CampaignData>();
                         MessageBox.Show("Your message has been successfully updated.");
                         Clear();

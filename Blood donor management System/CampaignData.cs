@@ -9,6 +9,7 @@ namespace Blood_donor_management_System
     public class CampaignData
     {
         public string cnts { get; set; }
+        public string CampID { get; set; }
         public string OrganizedBy { get; set; }
         public string Place { get; set; }
         public string Description { get; set; }

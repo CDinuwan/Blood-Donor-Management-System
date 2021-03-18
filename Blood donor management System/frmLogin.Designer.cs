@@ -37,19 +37,17 @@ namespace Blood_donor_management_System
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLogout = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(45, 239);
+            this.txtUsername.Location = new System.Drawing.Point(494, 157);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(268, 39);
             this.txtUsername.TabIndex = 0;
@@ -57,7 +55,7 @@ namespace Blood_donor_management_System
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(45, 323);
+            this.txtPassword.Location = new System.Drawing.Point(494, 241);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(268, 39);
             this.txtPassword.TabIndex = 1;
@@ -65,20 +63,20 @@ namespace Blood_donor_management_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 207);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(491, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 32);
+            this.label1.Size = new System.Drawing.Size(101, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 291);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(491, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 32);
+            this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -86,21 +84,21 @@ namespace Blood_donor_management_System
             // 
             this.btnLogin.ActiveBorderThickness = 1;
             this.btnLogin.ActiveCornerRadius = 20;
-            this.btnLogin.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnLogin.ActiveForecolor = System.Drawing.Color.LightSkyBlue;
-            this.btnLogin.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnLogin.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLogin.ActiveForecolor = System.Drawing.Color.Red;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.Maroon;
+            this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.ButtonText = "Login";
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnLogin.ForeColor = System.Drawing.Color.Red;
             this.btnLogin.IdleBorderThickness = 1;
             this.btnLogin.IdleCornerRadius = 20;
             this.btnLogin.IdleFillColor = System.Drawing.Color.White;
-            this.btnLogin.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnLogin.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnLogin.Location = new System.Drawing.Point(87, 375);
+            this.btnLogin.IdleForecolor = System.Drawing.Color.Red;
+            this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLogin.Location = new System.Drawing.Point(536, 293);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(181, 41);
@@ -112,21 +110,21 @@ namespace Blood_donor_management_System
             // 
             this.btnLogout.ActiveBorderThickness = 1;
             this.btnLogout.ActiveCornerRadius = 20;
-            this.btnLogout.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnLogout.ActiveForecolor = System.Drawing.Color.LightBlue;
-            this.btnLogout.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnLogout.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLogout.ActiveFillColor = System.Drawing.Color.Maroon;
+            this.btnLogout.ActiveForecolor = System.Drawing.Color.Red;
+            this.btnLogout.ActiveLineColor = System.Drawing.Color.Maroon;
+            this.btnLogout.BackColor = System.Drawing.Color.White;
             this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
-            this.btnLogout.ButtonText = "Sign up";
+            this.btnLogout.ButtonText = "Register";
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnLogout.ForeColor = System.Drawing.Color.Red;
             this.btnLogout.IdleBorderThickness = 1;
             this.btnLogout.IdleCornerRadius = 20;
             this.btnLogout.IdleFillColor = System.Drawing.Color.White;
-            this.btnLogout.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnLogout.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnLogout.Location = new System.Drawing.Point(87, 426);
+            this.btnLogout.IdleForecolor = System.Drawing.Color.Red;
+            this.btnLogout.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLogout.Location = new System.Drawing.Point(536, 344);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(181, 41);
@@ -137,7 +135,7 @@ namespace Blood_donor_management_System
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(317, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(762, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,70 +143,44 @@ namespace Blood_donor_management_System
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(420, 420);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Brown;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(446, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 157);
-            this.panel1.TabIndex = 27;
+            this.panel1.Size = new System.Drawing.Size(10, 420);
+            this.panel1.TabIndex = 29;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 16);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(116, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 44);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Blood";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(165, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 44);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Donor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(36, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(276, 44);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Management";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(92, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 44);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "System";
+            this.label3.Size = new System.Drawing.Size(587, 47);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Blood Donor Management System";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(357, 527);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(796, 480);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
@@ -221,8 +193,7 @@ namespace Blood_donor_management_System
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,10 +208,8 @@ namespace Blood_donor_management_System
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogout;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }
 }

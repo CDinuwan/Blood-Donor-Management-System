@@ -1,41 +1,83 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
-
 
 namespace BDMSUnitTests
 {
     [TestClass]
     public class UnitTest1
     {
-        IFirebaseConfig config = new FirebaseConfig
+        [TestMethod]
+        public void LogIn_NullUser_ISFalse()
         {
-            AuthSecret = "RexrG6OuogoAu6dghwvsZtLkCi3z5ig2NfaRtnsK",
-            BasePath = "https://blood-donor-9af63-default-rtdb.firebaseio.com/"
-        };
-        IFirebaseClient client;
-        public void TestMethod1()
-        {
-            try
+            var user = new Blood_donor_management_System.MyUser();
+            user.Username = "Chanuka";
+
+            var user1 = new Blood_donor_management_System.MyUser();
+            user.Username = "Dinuwan";
+
+            var result=true;
+            if (user1 == null || user == null)
             {
-                client = new FireSharp.FirebaseClient(config);
+                result = false;
+            }
 
-                if (client != null)
-                {
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void LogInWithPass_SamePass_ISTrue()
+        {
+            var user = new Blood_donor_management_System.MyUser();
+            user.Password = "1234";
 
-                }
-                else
+            var user1 = new Blood_donor_management_System.MyUser();
+            user1.Password = "1234";
+
+            var result = false;
+            if(user.Password==user1.Password)
+            {
+                result = true;
+            }
+
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void LogInWithPass_DifferentPassword_IsFalse()
+        {
+            var user = new Blood_donor_management_System.MyUser();
+            user.Password = "1234";
+
+            var user1 = new Blood_donor_management_System.MyUser();
+            user1.Password = "1111";
+
+            var result = true;
+            if(user.Password!=user1.Password)
+            {
+                result = false;
+            }
+
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void LogInwithPass_UnmatchPasswordAndUser_IsFalse()
+        {
+            var user = new Blood_donor_management_System.MyUser();
+            user.Password = "1234";
+            user.Username = "Chanuka";
+
+            var user1 = new Blood_donor_management_System.MyUser();
+            user.Password = "1111";
+            user.Username = "Chanuka";
+
+            var result = true;
+            if(user1.Username==user.Username)
+            {
+                if(user1.Password!=user.Password)
                 {
-                    Console.Write("Check your connection again!");
+                    result = false;
+
+                    Assert.IsFalse(result);
                 }
             }
-            catch (Exception)
-            {
-                Console.Write("Check your connection again!", "Error");
-            }
+
         }
     }
 }

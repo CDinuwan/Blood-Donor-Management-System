@@ -57,9 +57,15 @@ namespace Blood_donor_management_System
                     {
                         MyUser.ShowError();
                     }
-                }catch(Exception er)
+                }catch(NullReferenceException)
                 {
-                    MessageBox.Show(er.Message);
+                    MessageBox.Show("Your entered details are incorrect!");
+                    txtPassword.Clear();
+                    txtUsername.Clear();
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Some error occured. Please restart the system!");
                 }
             }
             else

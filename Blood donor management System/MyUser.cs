@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blood_donor_management_System
 {
-    class MyUser
+    public class MyUser
     {
         public string ID { get; set; }
         public string Username { get; set; }
