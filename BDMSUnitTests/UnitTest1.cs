@@ -3,7 +3,7 @@
 namespace BDMSUnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class TestUser
     {
         [TestMethod]
         public void LogIn_NullUser_ISFalse()
@@ -78,6 +78,15 @@ namespace BDMSUnitTests
                 }
             }
 
+        }
+        [TestMethod]
+        public void NetworkConnectionCheck_NoConnection_IsFalse()
+        {
+            var connection = false;
+            if(connection=false)
+            {
+                Assert.IsFalse(connection);
+            }
         }
     }
 }
