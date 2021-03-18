@@ -41,7 +41,7 @@ namespace Blood_donor_management_System
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(351, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(357, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,7 +63,7 @@ namespace Blood_donor_management_System
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(107, 24);
+            this.textBox1.Location = new System.Drawing.Point(119, 24);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(232, 46);
             this.textBox1.TabIndex = 29;
@@ -72,11 +72,11 @@ namespace Blood_donor_management_System
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Location = new System.Drawing.Point(0, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 37);
+            this.label1.Size = new System.Drawing.Size(120, 37);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Place";
+            this.label1.Text = "CampID";
             // 
             // frmDeleteCampaigns
             // 

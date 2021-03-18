@@ -82,8 +82,6 @@ namespace Blood_donor_management_System
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            frmCampaign frm = new frmCampaign();
-            frm.Clear();
         }
     }
 }
