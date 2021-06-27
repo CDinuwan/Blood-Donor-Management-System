@@ -202,6 +202,12 @@
     <Compile Include="Counter_Camp.cs" />
     <Compile Include="Counter_Class.cs" />
     <Compile Include="Data.cs" />
+    <Compile Include="frmBloodRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBloodRequests.Designer.cs">
+      <DependentUpon>frmBloodRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCampaign.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     <Compile Include="MyUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBloodRequests.resx">
+      <DependentUpon>frmBloodRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCampaign.resx">
       <DependentUpon>frmCampaign.cs</DependentUpon>
     </EmbeddedResource>

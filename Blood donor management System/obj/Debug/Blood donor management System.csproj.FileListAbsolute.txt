@@ -262,3 +262,4 @@ G:\Projects\Blood-Donor-Management-System\Blood donor management System\obj\Debu
 G:\Projects\Blood-Donor-Management-System\Blood donor management System\obj\Debug\Blood donor management System.csproj.CopyComplete
 G:\Projects\Blood-Donor-Management-System\Blood donor management System\obj\Debug\Blood donor management System.exe
 G:\Projects\Blood-Donor-Management-System\Blood donor management System\obj\Debug\Blood donor management System.pdb
+G:\Projects\Blood-Donor-Management-System\Blood donor management System\obj\Debug\Blood_donor_management_System.frmBloodRequests.resources

@@ -54,5 +54,14 @@ namespace Blood_donor_management_System
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            frmBloodRequests frm = new frmBloodRequests();
+            frm.TopLevel = false;
+            panel2.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+        }
     }
 }
