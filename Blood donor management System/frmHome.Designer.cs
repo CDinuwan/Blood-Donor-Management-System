@@ -142,7 +142,7 @@ namespace Blood_donor_management_System
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 54);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Blood Requests";
+            this.button2.Text = "Requests ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -157,7 +157,7 @@ namespace Blood_donor_management_System
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(237, 54);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Donation";
+            this.button3.Text = "Request Details";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // frmHome

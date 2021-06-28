@@ -34,13 +34,13 @@ namespace Blood_donor_management_System
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCampID = new System.Windows.Forms.TextBox();
+            this.txtRequestID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPlace = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboBoodGroup = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboEmergencyState = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.cboSex = new System.Windows.Forms.ComboBox();
@@ -52,17 +52,17 @@ namespace Blood_donor_management_System
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblDonor = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -113,13 +113,13 @@ namespace Blood_donor_management_System
             this.label6.TabIndex = 44;
             this.label6.Text = "Request ID";
             // 
-            // txtCampID
+            // txtRequestID
             // 
-            this.txtCampID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCampID.Location = new System.Drawing.Point(200, 89);
-            this.txtCampID.Name = "txtCampID";
-            this.txtCampID.Size = new System.Drawing.Size(289, 26);
-            this.txtCampID.TabIndex = 43;
+            this.txtRequestID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRequestID.Location = new System.Drawing.Point(200, 89);
+            this.txtRequestID.Name = "txtRequestID";
+            this.txtRequestID.Size = new System.Drawing.Size(289, 26);
+            this.txtRequestID.TabIndex = 43;
             // 
             // label3
             // 
@@ -178,17 +178,17 @@ namespace Blood_donor_management_System
             this.cboBoodGroup.Size = new System.Drawing.Size(289, 29);
             this.cboBoodGroup.TabIndex = 45;
             // 
-            // comboBox1
+            // cboEmergencyState
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboEmergencyState.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEmergencyState.FormattingEnabled = true;
+            this.cboEmergencyState.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox1.Location = new System.Drawing.Point(203, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 29);
-            this.comboBox1.TabIndex = 47;
+            this.cboEmergencyState.Location = new System.Drawing.Point(203, 248);
+            this.cboEmergencyState.Name = "cboEmergencyState";
+            this.cboEmergencyState.Size = new System.Drawing.Size(289, 29);
+            this.cboEmergencyState.TabIndex = 47;
             // 
             // label4
             // 
@@ -303,28 +303,6 @@ namespace Blood_donor_management_System
             this.panel2.Size = new System.Drawing.Size(351, 187);
             this.panel2.TabIndex = 60;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(156, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 29);
-            this.textBox2.TabIndex = 60;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 55);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Search With Name";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,6 +324,28 @@ namespace Blood_donor_management_System
             this.button2.TabIndex = 63;
             this.button2.Text = "Search With Emergency";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(156, 70);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(190, 29);
+            this.textBox2.TabIndex = 60;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 55);
+            this.button1.TabIndex = 61;
+            this.button1.Text = "Search With Name";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -392,48 +392,50 @@ namespace Blood_donor_management_System
             this.btnClear.TabIndex = 65;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button3
+            // btnupdate
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(279, 531);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 38);
-            this.button3.TabIndex = 64;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnupdate.BackColor = System.Drawing.Color.Black;
+            this.btnupdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.ForeColor = System.Drawing.Color.White;
+            this.btnupdate.Location = new System.Drawing.Point(279, 531);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(86, 38);
+            this.btnupdate.TabIndex = 64;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnDelete
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(180, 531);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 38);
-            this.button4.TabIndex = 63;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(180, 531);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(86, 38);
+            this.btnDelete.TabIndex = 63;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnSave
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(82, 531);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 38);
-            this.button6.TabIndex = 62;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(82, 531);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(86, 38);
+            this.btnSave.TabIndex = 62;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmBloodRequests
             // 
@@ -442,9 +444,9 @@ namespace Blood_donor_management_System
             this.ClientSize = new System.Drawing.Size(861, 614);
             this.ControlBox = false;
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cboSex);
@@ -455,11 +457,11 @@ namespace Blood_donor_management_System
             this.Controls.Add(this.txtContactNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboEmergencyState);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboBoodGroup);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCampID);
+            this.Controls.Add(this.txtRequestID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPlace);
@@ -486,13 +488,13 @@ namespace Blood_donor_management_System
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCampID;
+        private System.Windows.Forms.TextBox txtRequestID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPlace;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox cboBoodGroup;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cboEmergencyState;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.ComboBox cboSex;
@@ -512,8 +514,8 @@ namespace Blood_donor_management_System
         private System.Windows.Forms.Label lblDonor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
     }
 }
